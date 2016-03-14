@@ -58,6 +58,10 @@ public class Voiture extends Observable {
 			vitesseMetreSeconde += 10;	
 	}
 
+    public void arreter() {
+         vitesseMetreSeconde = 0;
+    }
+
 	public Object getVitesse() {
 		return vitesseMetreSeconde;
 	}

@@ -9,11 +9,18 @@ public class Voiture extends Observable {
 	private int vitesseMetreSeconde;
 	private int directionEnDegres;
 
+    public int getPointsPermis() {
+        return pointsPermis;
+    }
+
+    private int pointsPermis;
+
 	public Voiture(int x, int y, int vitesse) {
 		this.x = x;
 		this.y = y;
 		this.vitesseMetreSeconde = vitesse;
 		this.directionEnDegres = 0;
+        this.pointsPermis = 12;
 	}
 
 	public void miseAJourPosition() {
@@ -59,7 +66,7 @@ public class Voiture extends Observable {
 	}
 
     public void arreter() {
-         vitesseMetreSeconde = 0;
+            vitesseMetreSeconde = 0;
     }
 
 	public Object getVitesse() {
@@ -94,6 +101,5 @@ public class Voiture extends Observable {
 	public Object getDirection() {
 	return directionEnDegres;
 	}
-
 	
 }

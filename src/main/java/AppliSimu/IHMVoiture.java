@@ -50,6 +50,7 @@ public class IHMVoiture extends JFrame implements Observer{
 
 	@Override
 	public void update(Observable arg0, Object arg1) {
+        this.maCommandeVoiture.sortieRoute();
 		this.repaint();
 	}
 
@@ -77,7 +78,9 @@ public class IHMVoiture extends JFrame implements Observer{
 	}
 
     private void dessinerRoutes(Graphics contexteGraphique) {
+        //Route horizontale
         contexteGraphique.fillRect(0, 300, 1000, 30);
+        //Route verticale
         contexteGraphique.fillRect(400, 0, 30, 1000);
     }
 	
